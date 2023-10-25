@@ -1,0 +1,21 @@
+ALGORITHM insertion_sort
+VAR
+    arr: ARRAY_OF INTEGER[10];
+    i,j,temp: Integer;   
+BEGIN
+    i:=0;
+    j:=i+1;
+    FOR i FROM 0 TO arr.lenght-1 STEP 1  DO
+        write("enter element of array")
+        read(arr[i]);
+    END_FOR
+    FOR i FROM 0 TO arr.lenght-1 STEP 1  DO
+    FOR j := i+1 and j>0 STEP -1  DO
+        IF (arr[j-1]>arr[j]) THEN
+            temp := arr[1];
+            arr[j] := arr[j-1];
+            arr[j-1] := temp;
+        END_IF
+    END_FOR
+    END_FOR
+END
